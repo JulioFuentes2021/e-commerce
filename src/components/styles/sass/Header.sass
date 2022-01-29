@@ -13,3 +13,23 @@
 
 .links__item--design
     font-weight: bold
+
+.links__section
+    display: flex
+
+.links__item--gap
+    margin: 0 1rem
+
+.links--hiddenPc
+    display: none
+
+@media screen and (min-width:640px)
+    .links__item--extraSize
+        margin-left: 60%
+
+@media screen and (min-width:768px)
+    .links--hiddenMobile
+        display: none
+
+    .links--hiddenPc
+        display: flex
