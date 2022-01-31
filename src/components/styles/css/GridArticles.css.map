@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,YAAY,AAAC,CACT,OAAO,CAAE,IAAI,CACb,qBAAqB,CAAE,oCAAoC,CAC3D,GAAG,CAAE,IAAI,CACT,aAAa,CAAE,MAAM,CAAG,AAE5B,MAAM,CAAC,MAAM,MAAM,SAAS,EAAE,KAAK,EAC/B,qBAAqB,CAAE,oCAAoC",
+    "sources": [
+        "../sass/GridArticles.sass"
+    ],
+    "names": [],
+    "file": "GridArticles.css"
+}
