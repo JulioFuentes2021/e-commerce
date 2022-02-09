@@ -1,0 +1,53 @@
+@use 'buttons'
+
+.speaker
+    border-radius: 1rem
+    // background: red
+    display: flex
+    justify-content: space-around
+    align-items: center
+    overflow: hidden
+    background-color: #ccc
+    // display: grid
+    // grid-template-columns: repeat(4,1fr)
+    // justify-items: center
+    // align-items: center
+
+.speaker__detail
+    // grid-column: span 3
+    display: flex
+    flex-direction: column
+    align-items: center
+    // width: 100%
+    font-size: 1.5rem
+    transform: translateX(40%)
+    // background-color: yellow
+    // flex-shrink: 20
+
+.speaker__name
+    margin: 1rem 0
+    font-size: 2rem
+    font-weight: bold
+
+.speaker__link
+    @include buttons.button
+    font-size: 1rem
+    background-color: inherit
+    border: 1px solid #000
+    color: #000
+
+.speaker__image
+    width: 200px
+    // position: absolute
+    // overflow: hidden
+    // transform: tranlateX(40%)
+
+.speaker__imageContainer
+    // background: blue
+    // position: relative
+    // left: 60%
+    transform: translateX(50%)
+
+@media screen and (min-width: 768px)
+    .speaker__image
+        width: 400px

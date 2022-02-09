@@ -1,0 +1,52 @@
+.speaker {
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  overflow: hidden;
+  background-color: #ccc;
+}
+
+.speaker__detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.5rem;
+  transform: translateX(40%);
+}
+
+.speaker__name {
+  margin: 1rem 0;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.speaker__link {
+  width: 8rem;
+  height: 3rem;
+  outline: none;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+  background-color: inherit;
+  border: 1px solid #000;
+  color: #000;
+}
+
+.speaker__image {
+  width: 200px;
+}
+
+.speaker__imageContainer {
+  transform: translateX(50%);
+}
+
+@media screen and (min-width: 768px) {
+  .speaker__image {
+    width: 400px;
+  }
+}
+
+/*# sourceMappingURL=Zx7Speaker.css.map */
