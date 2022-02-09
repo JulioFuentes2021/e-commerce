@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './components/Zx7Speaker';
+import App from './components/Yx1Earphones';
 
 ReactDOM.render(
   <React.StrictMode>
