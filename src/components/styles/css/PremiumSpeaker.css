@@ -1,0 +1,123 @@
+.circle {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.circle__item {
+  position: absolute;
+  z-index: 0;
+  background-color: #fff;
+}
+
+.circle__item:nth-child(1) {
+  width: 300px;
+  margin: 2rem;
+  height: 340px;
+  border-radius: 100%;
+  background-color: inherit;
+  border: 4px solid rgba(255, 255, 255, 0.1);
+}
+
+.circle__item:nth-child(2) {
+  width: 400px;
+  margin: 2rem;
+  height: 400px;
+  border-radius: 100%;
+  background-color: inherit;
+  border: 4px solid rgba(255, 255, 255, 0.1);
+}
+
+.circle__item:nth-child(3) {
+  width: 400px;
+  margin: 2rem;
+  height: 400px;
+  border-radius: 100%;
+  background-color: inherit;
+  border: 4px solid rgba(255, 255, 255, 0.1);
+}
+
+.premium {
+  width: 100%;
+  height: 40rem;
+  background-color: #fc682e;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.premium__article {
+  overflow: hidden;
+}
+
+.premium__image {
+  width: 20rem;
+  height: 20rem;
+  z-index: 10;
+}
+
+.premium__name {
+  font-size: clamp(1rem, 10vw, 3rem);
+  color: #fff;
+  font-weight: bolder;
+}
+
+.premium__description {
+  font-size: 1.5rem;
+  color: #eee;
+  margin: 1.5rem 0;
+}
+
+.premium__link {
+  width: 8rem;
+  height: 3rem;
+  outline: none;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  background-color: #000;
+  position: relative;
+}
+
+@media screen and (min-width: 1024px) {
+  .premium {
+    flex-direction: row;
+  }
+
+  .premium__article {
+    text-align: left;
+  }
+
+  .premium__image {
+    width: 30rem;
+    height: 30rem;
+  }
+
+  .premium__description {
+    font-size: clamp(1rem, 10vw, 2rem);
+  }
+
+  .circle__item:nth-child(1) {
+    width: 600px;
+    height: 600px;
+    transform: translateY(40%);
+  }
+
+  .circle__item:nth-child(2) {
+    width: 700px;
+    height: 600px;
+    transform: translateY(30%);
+  }
+
+  .circle__item:nth-child(3) {
+    width: 1000px;
+    height: 1000px;
+    transform: translateY(-20%);
+  }
+}
+
+/*# sourceMappingURL=PremiumSpeaker.css.map */

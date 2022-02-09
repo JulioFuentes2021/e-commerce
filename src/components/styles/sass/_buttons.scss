@@ -1,0 +1,11 @@
+$button: 1rem;
+
+@mixin button {
+	width: 8rem;
+	height: 3rem;
+	outline: none;
+	color: #fff;
+	font-weight: 600;
+	cursor: pointer;
+	border: none;
+}

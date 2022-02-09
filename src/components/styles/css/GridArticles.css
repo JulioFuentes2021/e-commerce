@@ -1,9 +1,2 @@
-.allArticles {
-	display: -ms-grid;
-	display: grid;
-	-ms-grid-columns: (minmax(300px, 1fr)) [auto-fit];
-	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-	gap: 6rem;
-	justify-items: center;
-}
+.allArticles{display:-ms-grid;display:grid;-ms-grid-columns:(minmax(300px, 1fr))[auto-fit];grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));gap:6rem;justify-items:center}@media screen and (min-width: 768px){-ms-grid-columns:(minmax(350px, 1fr))[auto-fit];grid-template-columns:repeat(auto-fit, minmax(350px, 1fr))}
 /*# sourceMappingURL=GridArticles.css.map */
