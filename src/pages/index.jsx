@@ -5,6 +5,7 @@ import GridArticles from '../components/GridArticles';
 import Zx7Speaker from '../components/Zx7Speaker';
 import PremiumSpeaker from '../components/PremiumSpeaker';
 import Yx1Earphones from '../components/Yx1Earphones';
+import Promotion from '../components/Promotion';
 import '../components/styles/css/index.css';
 
 const index = () => (
@@ -17,6 +18,7 @@ const index = () => (
         <PremiumSpeaker />
         <Zx7Speaker />
         <Yx1Earphones />
+        <Promotion />
       </div>
     </main>
   </div>
