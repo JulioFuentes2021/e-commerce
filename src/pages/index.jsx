@@ -6,6 +6,7 @@ import Zx7Speaker from '../components/Zx7Speaker';
 import PremiumSpeaker from '../components/PremiumSpeaker';
 import Yx1Earphones from '../components/Yx1Earphones';
 import Promotion from '../components/Promotion';
+import Footer from '../components/Footer';
 import '../components/styles/css/index.css';
 
 const index = () => (
@@ -20,6 +21,7 @@ const index = () => (
         <Yx1Earphones />
         <Promotion />
       </div>
+      <Footer />
     </main>
   </div>
 );
