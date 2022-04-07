@@ -9,38 +9,32 @@
     background-color: #fff
     // align-items: center
 
-.earphone__imageContainer
-    width: 100%
-    height: 20rem
-    border-radius: 1rem
-    background-color: #000
+    &__imageContainer
+        width: 100%
+        height: 20rem
+        border-radius: 1rem
+        background-color: #000
 
-.earphone__image
-    // background-image: url('https://img.search.brave.com/XlTmXUGXc71M7DHhU1vXmzbVneE8B0jBkJscvjBzFEo/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly93d3cu/ZnJlZXBuZ2ltZy5j/b20vdGh1bWIvdGVj/aG5vbG9neS81MTM5/NC0zLW1vYmlsZS1l/YXJwaG9uZS1waWN0/dXJlLWZyZWUtcGhv/dG8tcG5nLnBuZw')
-    // background-repeat: no-repeat
-    // background-size: cover
-    // background-position: center
-    width: 100%
-    height: 100%
-    object-fit: contain
-    // grid-column: 1/8
+    &__image
+        width: 100%
+        height: 100%
+        object-fit: contain
 
-.earphone__detail
-    // width: 45%
-    display: flex
-    flex-direction: column
-    align-items: center
-    justify-content: center
-    width: 100%
-    height: 20rem
-    border-radius: 1rem
-    background-color: #ccc
-    margin-top: 1rem
+    &__detail
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        width: 100%
+        height: 20rem
+        border-radius: 1rem
+        background-color: #ccc
+        margin-top: 1rem
 
-.earphone__name
-    font-size: 2rem
-    font-weight: bold
-    margin: 1rem 0
+    &__name
+        font-size: 2rem
+        font-weight: bold
+        margin: 1rem 0
 
 .earphone__link
     @include buttons.button
@@ -54,9 +48,9 @@
         justify-content: space-between
         align-items: center
 
-    .earphone__imageContainer
-        width: 45%
+        &__imageContainer
+            width: 45%
 
-    .earphone__detail
-        width: 45%
-        margin-top: 0
+        &__detail
+            width: 45%
+            margin-top: 0

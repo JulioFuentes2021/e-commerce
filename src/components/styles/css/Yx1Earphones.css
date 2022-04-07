@@ -3,20 +3,17 @@
   flex-direction: column;
   background-color: #fff;
 }
-
 .earphone__imageContainer {
   width: 100%;
   height: 20rem;
   border-radius: 1rem;
   background-color: #000;
 }
-
 .earphone__image {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
-
 .earphone__detail {
   display: flex;
   flex-direction: column;
@@ -28,7 +25,6 @@
   background-color: #ccc;
   margin-top: 1rem;
 }
-
 .earphone__name {
   font-size: 2rem;
   font-weight: bold;
@@ -54,11 +50,9 @@
     justify-content: space-between;
     align-items: center;
   }
-
   .earphone__imageContainer {
     width: 45%;
   }
-
   .earphone__detail {
     width: 45%;
     margin-top: 0;
