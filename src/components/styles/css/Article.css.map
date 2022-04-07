@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../sass/Article.sass"],"names":[],"mappings":"AAAA;EACI;EACA;EAEA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGJ;EACI;EACA;EACA;EAEA;EAEA;;;AAEJ;EACI;EACA;;;AAEJ;EACI;EACA;EACA;;;AAEJ;EACI;EACA;EACA;;;AAEJ;EACI;EACA;;;AAEJ;EACI;IACI","file":"Article.css"}
+{"version":3,"sourceRoot":"","sources":["../sass/Article.sass"],"names":[],"mappings":"AAAA;EACI;EACA;EAEA;EACA;EACA;EACA;EACA;EACA;EACA;;AAGA;EACI;EACA;EACA;;AAMJ;EACI;EACA;;AAEJ;EACI;EACA;EACA;;AAEJ;EACI;EACA;EACA;;AAEJ;EACI;EACA;;;AAER;EACI;IACI","file":"Article.css"}

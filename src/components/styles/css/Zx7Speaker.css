@@ -6,7 +6,6 @@
   overflow: hidden;
   background-color: #ccc;
 }
-
 .speaker__detail {
   display: flex;
   flex-direction: column;
@@ -14,7 +13,6 @@
   font-size: 1.5rem;
   transform: translateX(40%);
 }
-
 .speaker__name {
   margin: 1rem 0;
   font-size: 2rem;
