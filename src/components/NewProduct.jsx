@@ -1,16 +1,16 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './styles/css/NewProduct.css';
 
 function NewProduct() {
-  useEffect(() => {
-    const test = async () => {
-      const response = await fetch('http://localhost:8000/headphones/');
-      const data = await response.json();
-      console.log(data);
-    };
+  // useEffect(() => {
+  //   const test = async () => {
+  //     const response = await fetch('http://localhost:8000/headphones/');
+  //     const data = await response.json();
+  //     console.log(data);
+  //   };
 
-    test();
-  }, []);
+  //   test();
+  // }, []);
 
   return (
     <div className="product">

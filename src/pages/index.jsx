@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from '../components/Header';
 import NewProduct from '../components/NewProduct';
 import GridArticles from '../components/GridArticles';
@@ -9,21 +9,36 @@ import Promotion from '../components/Promotion';
 import Footer from '../components/Footer';
 import '../components/styles/css/index.css';
 
-const index = () => (
-  <div className="index">
-    <Header />
-    <NewProduct />
-    <main className="main">
-      <div className="main__content">
-        <GridArticles />
-        <PremiumSpeaker />
-        <Zx7Speaker />
-        <Yx1Earphones />
-        <Promotion />
-      </div>
-      <Footer />
-    </main>
-  </div>
-);
+const index = () => {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    const test = async () => {
+      const response = await fetch('http://localhost:8000/headphones/');
+      const data = await response.json();
+      console.log(data.products);
+      setProducts(data.products);
+    };
+
+    test();
+  }, []);
+
+  return (
+    <div className="index">
+      <Header />
+      <NewProduct />
+      <main className="main">
+        <div className="main__content">
+          <GridArticles />
+          <PremiumSpeaker />
+          <Zx7Speaker />
+          <Yx1Earphones />
+          <Promotion />
+        </div>
+        <Footer />
+      </main>
+    </div>
+  );
+};
 
 export default index;

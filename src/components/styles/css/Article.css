@@ -10,8 +10,9 @@
   border-radius: 1rem;
 }
 .article__image {
-  width: 12rem;
-  height: 12rem;
+  width: 15rem;
+  height: 15rem;
+  object-fit: cover;
   transform: translateY(-45%);
 }
 .article__name {
