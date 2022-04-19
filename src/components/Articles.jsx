@@ -1,6 +1,6 @@
 import React from 'react';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import './styles/css/Article.css';
+import './styles/css/layout/Article.css';
 
 function Articles({ data }) {
   return (

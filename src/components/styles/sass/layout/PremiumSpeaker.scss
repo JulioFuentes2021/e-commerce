@@ -1,4 +1,4 @@
-@use "../sass/components/_index.sass" as button;
+@use "../components/_index" as button;
 $circleColor: 4px solid rgba(255, 255, 255, 0.1);
 
 .circle {

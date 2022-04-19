@@ -1,6 +1,6 @@
 /* eslint-disable indent */
 import React from 'react';
-import './styles/css/Zx7Speaker.css';
+import './styles/css/layout/Zx7Speaker.css';
 
 function Zx7Speaker() {
   // eslint-disable-next-line indent
