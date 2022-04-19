@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles/css/layout/NewProduct.css';
+import '@layout/NewProduct.css';
 
 function NewProduct() {
   // useEffect(() => {
