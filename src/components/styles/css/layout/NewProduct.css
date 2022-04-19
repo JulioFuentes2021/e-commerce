@@ -50,7 +50,7 @@
   cursor: pointer;
 }
 .product__link--color {
-  background-color: #F57157;
+  background-color: #f78e06;
 }
 
 @media screen and (min-width: 1280px) {

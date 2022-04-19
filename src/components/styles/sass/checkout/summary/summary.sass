@@ -1,4 +1,6 @@
 // SummaryItems components
+@use "../../components/_index" as button
+
 .item
     display: flex
     align-items: center
@@ -66,3 +68,7 @@
     width: 20rem
     background-color: #fff
     padding: 1rem
+
+    &__btn
+        @include button.configure($width:100%)
+        @include button.orangeButton

@@ -1,4 +1,4 @@
-@use '../buttons'
+@use '../components/_index' as button
 
 .speaker
     border-radius: 1rem
@@ -22,8 +22,9 @@
         font-weight: bold
 
 .speaker__link
-    @include buttons.button
-    font-size: 1rem
+    // @include button.configure($width:10rem)
+    @include button.buttonWithoutBackground
+    // font-size: 1rem
     background-color: inherit
     border: 1px solid #000
     color: #000

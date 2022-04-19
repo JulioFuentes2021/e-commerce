@@ -22,12 +22,13 @@
 .speaker__link {
   width: 8rem;
   height: 3rem;
-  outline: none;
-  color: #fff;
-  font-weight: 600;
-  cursor: pointer;
   border: none;
-  font-size: 1rem;
+  outline: none;
+  font-weight: bolder;
+  cursor: pointer;
+  border: 1px solid #000;
+  color: #000;
+  background-color: inherit;
   background-color: inherit;
   border: 1px solid #000;
   color: #000;

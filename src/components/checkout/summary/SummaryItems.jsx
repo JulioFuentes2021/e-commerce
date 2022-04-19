@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../styles/css/checkout/summary/summary.css';
+// import '../../styles/css/checkout/summary/summary.css';
 
 function SummaryItems() {
   return (

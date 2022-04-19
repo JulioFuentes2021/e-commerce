@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './components/checkout/Index';
+import App from './pages/index';
 
 ReactDOM.render(
   <React.StrictMode>

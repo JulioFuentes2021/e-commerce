@@ -1,3 +1,5 @@
+@use '../main' as variables
+
 // $-background: #444444
 // $-color:
 $-width: 8rem
@@ -31,3 +33,7 @@ $-height: 3rem
 
 @mixin orangeButton
     @include -buttons
+    background-color: variables.$primary-color
+    color: #fff
+
+//#f77206 

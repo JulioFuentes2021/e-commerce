@@ -1,3 +1,5 @@
+@use '../main' as variables
+
 .product
     color: #fff
     display: flex
@@ -50,7 +52,7 @@
         cursor: pointer
 
     &__link--color
-        background-color: #F57157
+        background-color: variables.$secondary-color
 
 @media screen and (min-width:1280px)
     .product

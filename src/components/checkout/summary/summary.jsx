@@ -9,6 +9,7 @@ const summary = () => (
     <SummaryItems />
     <SummaryItems />
     <Total />
+    <button className="summary__btn" type="button">Continue & pay</button>
   </div>
 );
 
