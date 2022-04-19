@@ -1,0 +1,30 @@
+// $-background: #444444
+// $-color:
+$-width: 8rem
+$-height: 3rem
+// @mixin configure
+
+@mixin configure($width: null, $height: null)
+    @if $width
+        $-width: $width !global
+    @if $height
+        $-height: $height !global
+
+@mixin -buttons
+    width: $-width
+    height: $-height
+    border: none
+    outline: none
+    font-weight: bolder
+    cursor: pointer
+
+@mixin buttonWithoutBackground
+    @include -buttons
+    border: 1px solid #000
+    color: #000
+    background-color: inherit
+
+@mixin blackButton
+    @include -buttons
+    background-color: #000
+    color: #fff

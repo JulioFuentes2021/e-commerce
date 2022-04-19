@@ -23,6 +23,8 @@ const index = () => {
     test();
   }, []);
 
+
+  //!I have to decide the best way to use the api for speakers components
   return (
     <div className="index">
       <Header />

@@ -1,4 +1,4 @@
-@use "buttons";
+@use "../sass/components/_index.sass" as button;
 $circleColor: 4px solid rgba(255, 255, 255, 0.1);
 
 .circle {
@@ -80,7 +80,8 @@ $circleColor: 4px solid rgba(255, 255, 255, 0.1);
 }
 
 .premium__link {
-	@include buttons.button;
+	@include button.configure($width:10rem);
+	@include button.blackButton;
 	background-color: #000;
 	position: relative;
 }

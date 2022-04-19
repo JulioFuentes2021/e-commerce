@@ -1,4 +1,4 @@
-@use 'buttons'
+@use '../sass/components/_index' as button
 
 .earphone
     // display: grid
@@ -37,7 +37,8 @@
         margin: 1rem 0
 
 .earphone__link
-    @include buttons.button
+    // @include button.configure($width: 1rem)
+    @include button.buttonWithoutBackground
     border: 1px solid #000
     color: #000
     background-color: inherit
