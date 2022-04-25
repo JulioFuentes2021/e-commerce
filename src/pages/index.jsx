@@ -9,6 +9,7 @@ import PremiumSpeaker from '@components/PremiumSpeaker';
 import Yx1Earphones from '@components/Yx1Earphones';
 import Promotion from '@components/Promotion';
 import Footer from '@components/Footer';
+import Layout from '@components/Layout';
 import '@styles/index.css';
 
 const index = () => {
@@ -27,8 +28,7 @@ const index = () => {
 
   //! I have to decide the best way to use the api for speakers components
   return (
-    <div className="index">
-      <Header />
+    <Layout className="index">
       <NewProduct />
       <main className="main">
         <div className="main__content">
@@ -38,9 +38,8 @@ const index = () => {
           <Yx1Earphones />
           <Promotion />
         </div>
-        <Footer />
       </main>
-    </div>
+    </Layout>
   );
 };
 

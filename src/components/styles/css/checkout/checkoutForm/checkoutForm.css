@@ -23,7 +23,7 @@
   background: #fff;
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  padding: 3rem;
 }
 .form__grid--extraMargin {
   margin-bottom: 1.5rem;

@@ -1,7 +1,6 @@
 .earphone {
   display: flex;
   flex-direction: column;
-  background-color: #fff;
 }
 .earphone__imageContainer {
   width: 100%;

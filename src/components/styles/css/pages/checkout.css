@@ -1,0 +1,24 @@
+.buyContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.buyPage {
+  display: flex;
+  width: 90%;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.buyPage__checkout {
+  width: 100%;
+  max-width: 50rem;
+}
+.buyPage__summary {
+  width: 100%;
+  max-width: 20rem;
+}
+
+/*# sourceMappingURL=checkout.css.map */

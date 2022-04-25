@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-// import App from './pages/index';
+import App from './pages/checkout';
 // import App from '@components/checkout/summary/summary';
-import App from '@components/checkout/checkoutForm/CheckOutForm';
+// import App from '@components/checkout/checkoutForm/CheckOutForm';
 
 
 ReactDOM.render(
