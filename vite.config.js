@@ -13,6 +13,7 @@ export default defineConfig({
       '@styles': path.resolve(__dirname, './src/components/styles/css/'),
       '@layout': path.resolve(__dirname, './src/components/styles/css/layout'),
       '@sass': path.resolve(__dirname, './src/components/styles/sass/'),
+      '@pages': path.resolve(__dirname, './src/pages/'),
     },
   },
 });
