@@ -1,14 +1,12 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable import/no-unresolved */
 import React, { useEffect, useState } from 'react';
-import Header from '@components/Header';
 import NewProduct from '@components/NewProduct';
 import GridArticles from '@components/GridArticles';
 import Zx7Speaker from '@components/Zx7Speaker';
 import PremiumSpeaker from '@components/PremiumSpeaker';
 import Yx1Earphones from '@components/Yx1Earphones';
 import Promotion from '@components/Promotion';
-import Footer from '@components/Footer';
 import Layout from '@components/Layout';
 import '@styles/index.css';
 

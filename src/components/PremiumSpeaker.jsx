@@ -1,5 +1,5 @@
 import React from 'react';
-import '@layout/PremiumSpeaker.css';
+// import '@layout/PremiumSpeaker.css';
 
 function PremiumSpeaker() {
   return (

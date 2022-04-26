@@ -1,5 +1,5 @@
 import React from 'react'
-import '@styles/checkout/checkoutForm/checkoutForm.css'
+// import '@styles/checkout/checkoutForm/checkoutForm.css'
 
 const FormInputAndLabel = ({ label, placeholder }) => {
     return (

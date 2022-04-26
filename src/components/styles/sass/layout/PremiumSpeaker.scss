@@ -1,5 +1,5 @@
 @use "../components/_index" as button;
-@use "../main" as variables;
+@use "../abstracts/variables" as variables;
 $circleColor: 4px solid rgba(255, 255, 255, 0.1);
 
 .circle {

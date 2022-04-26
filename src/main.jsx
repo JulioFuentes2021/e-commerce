@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import './main.css';
 // import App from './pages/checkout';
 import App from './routes/index';
 // import App from '@components/checkout/summary/summary';

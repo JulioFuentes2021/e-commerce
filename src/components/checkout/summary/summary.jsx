@@ -2,7 +2,7 @@
 import React from 'react';
 import SummaryItems from './SummaryItems';
 import Total from './Total';
-import '@styles/checkout/summary/summary.css';
+// import '@styles/checkout/summary/summary.css';
 
 const summary = () => (
   <div className="summary">

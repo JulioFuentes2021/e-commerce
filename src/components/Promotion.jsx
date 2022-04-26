@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 import React from 'react';
-import '@layout/Promotion.css';
+// import '@layout/Promotion.css';
 
 function Promotion() {
   return (

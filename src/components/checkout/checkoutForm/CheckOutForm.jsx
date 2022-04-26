@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Field from "./FormInputAndLabel";
 import RadioBtn from './RadioInputs';
-import "@styles/checkout/checkoutForm/checkoutForm.css";
+// import "@styles/checkout/checkoutForm/checkoutForm.css";
 
 const CheckOutForm = () => {
 
