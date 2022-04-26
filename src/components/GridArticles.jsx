@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 import React, { useState, useEffect } from 'react';
 import Article from './Articles';
-// import '@layout/GridArticles.css';
 
 function GridArticles() {
   const [products, setProducts] = useState([]);

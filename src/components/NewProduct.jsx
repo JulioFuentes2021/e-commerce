@@ -1,5 +1,4 @@
 import React from 'react';
-// import '@layout/NewProduct.css';
 
 function NewProduct() {
   // useEffect(() => {

@@ -1,5 +1,4 @@
 import React from 'react';
-// import '@layout/Header.css';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import MenuIcon from '@mui/icons-material/Menu';
 import PcHeader from './HeaderPc';

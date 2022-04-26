@@ -1,5 +1,4 @@
 import React from 'react';
-// import '@layout/Header.css';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 function HeaderPc() {

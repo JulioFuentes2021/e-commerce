@@ -1,5 +1,4 @@
 import React from 'react';
-// import '@styles/checkout/summary/summary.css';
 
 function Total() {
   return (

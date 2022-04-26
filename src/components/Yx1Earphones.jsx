@@ -1,5 +1,4 @@
 import React from 'react';
-// import '@layout/Yx1Earphones.css';
 
 function Yx1Earphones() {
   return (
