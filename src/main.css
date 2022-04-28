@@ -5,15 +5,18 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  height: 20rem;
+  height: 25rem;
   padding: 1rem 0;
   border-radius: 1rem;
+  margin: 2rem 0;
 }
 .article__image {
   width: 15rem;
   height: 15rem;
   object-fit: cover;
-  transform: translateY(-45%);
+  background-color: #fff;
+  filter: drop-shadow(0px 5px 10px #777);
+  transform: translateY(-35%);
 }
 .article__name {
   font-size: 1.5rem;
@@ -31,7 +34,7 @@
 }
 .article__icon {
   font-size: 1.5rem;
-  color: #f15112;
+  color: #f77206;
 }
 
 @media screen and (min-width: 768px) {

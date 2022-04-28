@@ -1,25 +1,11 @@
+@use '../abstracts/mixins' as *
+@use '../abstracts/variables' as variable
+
 .article
-    background: #ddd
-    width: 100%
-    // max-width: 25rem
-    display: flex
-    flex-direction: column
-    align-items: center
-    justify-content: space-between
-    height: 20rem
-    padding: 1rem 0
-    border-radius: 1rem
-    // margin: 0 .5rem
+    @include article-container(25rem)
 
     &__image
-        width: 15rem
-        height: 15rem
-        object-fit: cover
-        transform: translateY(-45%)
-    // transform: scaleY(3deg)
-        box-shadow: 0px 100px 50px -40px #777
-    // margin: .5rem 0
-        background-color: transparent
+        @include article-image(35%)
 
     &__name
         font-size: 1.5rem
@@ -37,7 +23,7 @@
 
     &__icon
         font-size: 1.5rem
-        color: #f15112
+        color: variable.$primary-color
 
 @media screen and (min-width: 768px)
     .article

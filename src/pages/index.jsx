@@ -8,7 +8,7 @@ import PremiumSpeaker from '@components/PremiumSpeaker';
 import Yx1Earphones from '@components/Yx1Earphones';
 import Promotion from '@components/Promotion';
 import Layout from '@components/Layout';
-import '@styles/index.css';
+// import '@styles/index.css';
 
 const index = () => {
   const [products, setProducts] = useState([]);
