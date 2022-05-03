@@ -37,7 +37,7 @@ function NewProduct() {
           {' '}
           enthusiast.
         </span>
-        <button type="button" className="product__link product__link--color product--margin">
+        <button type="button" className="product__link product--margin">
           SEE PRODUCT
         </button>
       </article>

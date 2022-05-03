@@ -1,0 +1,84 @@
+@use '../abstracts/mixins' as mixin
+@use '../abstracts/variables' as variable
+@use '../components/buttons' as button
+
+.view
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr))
+
+//Possible problem with this mixin
+.viewImage
+    background-color: #ddd
+    width: 100%
+    height: 35rem
+    display: flex
+    align-items: center
+    justify-content: center
+
+    &__item
+        width: 60%
+        height: 60%
+        padding: .5rem
+        min-width: 320px
+        min-height: 320px
+        object-fit: contain
+
+.viewDescription
+    display: flex
+    flex-direction: column
+    justify-content: center
+    gap: 2rem
+    padding: 2.5rem
+
+    &__tag
+        color: variable.$secondary-color
+        letter-spacing: 10px
+
+    &__name
+        font-size: 2rem
+        font-weight: bold
+
+    &__info
+        font-size: 1.2rem
+
+    &__price
+        font-size: 1.3rem
+        font-weight: 900
+
+.cart
+    display: flex
+
+    &__button
+        margin: 0 1rem
+        @include button.orangeButton
+
+.productsAmount
+    display: flex
+
+.productsAmount__operation
+    background-color: #ddd
+    width: 4rem
+    height: 3rem
+    border: none
+    cursor: pointer
+    font-size: 2rem
+
+.productsAmount__value
+    border-left: 1px solid #aaa
+    border-right: 1px solid #aaa
+    background-color: #ddd
+    width: 4rem
+    height: 3rem
+    display: flex
+    justify-content: center
+    align-items: center
+    font-size: 1.5rem
+
+//Container 
+.singleProductContainer
+    display: flex
+    justify-content: center
+    padding: 5rem 0
+
+    &__box
+        width: variable.$width
