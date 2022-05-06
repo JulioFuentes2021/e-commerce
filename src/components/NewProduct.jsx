@@ -1,15 +1,6 @@
 import React from 'react';
 
 function NewProduct() {
-  // useEffect(() => {
-  //   const test = async () => {
-  //     const response = await fetch('http://localhost:8000/headphones/');
-  //     const data = await response.json();
-  //     console.log(data);
-  //   };
-
-  //   test();
-  // }, []);
 
   return (
     <div className="product">

@@ -1,11 +1,14 @@
 @use '../abstracts/mixins' as *
 @use '../abstracts/variables' as variable
 
+.deleteBorder
+    text-decoration: none
+
 .article
     @include article-container(25rem)
 
     &__image
-        @include article-image(35%)
+        @include article-image(0%)
 
     &__name
         font-size: 1.5rem

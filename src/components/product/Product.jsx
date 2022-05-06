@@ -1,6 +1,10 @@
-import React from 'react'
+import React from 'react';
+import { useParams } from "react-router-dom";
+
 
 const Product = () => {
+    const params = useParams();
+
     return (
         <div className="view">
             <div className="viewImage">
@@ -8,7 +12,7 @@ const Product = () => {
             </div>
             <div className="viewDescription">
                 <span className="viewDescription__tag">NEW PRODUCT</span>
-                <span className="viewDescription__name">XX99 MARK || HEADPHONES</span>
+                <span className="viewDescription__name">{params.id}</span>
                 <p className="viewDescription__info">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit iure sequi delectus nemo nesciunt in est praesentium fuga tenetur, magnam voluptatibus harum libero. Deleniti iusto esse error tempore reiciendis provident eius mollitia sint veritatis totam nobis saepe, beatae distinctio odio.</p>
                 <span className="viewDescription__price">$ 2,999</span>
                 <div className="cart">

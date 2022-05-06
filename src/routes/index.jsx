@@ -9,7 +9,7 @@ const Store = () => {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/checkout" element={<Checkout />} />
-                <Route path="/product" element={<Product />} />
+                <Route path="/product/:id" element={<Product />} />
             </Routes>
         </BrowserRouter>
     )
