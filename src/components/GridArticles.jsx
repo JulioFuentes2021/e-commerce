@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import React, { useState, useEffect } from 'react';
 import Article from './Articles';
+import Loading from './loader/loader';
 
 function GridArticles() {
   const [products, setProducts] = useState([]);
@@ -18,17 +19,21 @@ function GridArticles() {
 
   useEffect(() => {
     const test = async () => {
-      const response = await fetch('https://fakestoreapi.com/products/category/electronics?limit=3');
-      const data = await response.json();
-      console.log(data);
-      setProducts(data)
+      try {
+        const response = await fetch('https://fakestoreapi.com/products/category/electronics?limit=3');
+        const data = await response.json();
+        console.log(data);
+        setProducts(data)
+      } catch (error) {
+        console.log('Ha surgido un error')
+      }
     };
 
     test();
   }, []);
 
   if (!products.length) {
-    return 'Loading';
+    return <Loading />
   }
 
   return (
