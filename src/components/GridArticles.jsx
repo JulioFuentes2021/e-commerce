@@ -11,7 +11,7 @@ function GridArticles({ data }) {
   useEffect(() => {
     const test = async () => {
       try {
-        const response = await fetch('http://localhost:8000/headphones');
+        const response = await fetch('http://localhost:8000/headphones/category/electronics?limit=3');
         const data = await response.json();
         setMainProducts(data.products)
       } catch (error) {
