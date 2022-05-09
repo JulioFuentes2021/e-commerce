@@ -13,7 +13,7 @@ function Articles({ data }) {
       <span className="article__name article--margin">{data.name}</span>
       <div className="article__shop article--margin">
         <Link
-          to={`/product/${data.id}`}
+          to={`/product/${data._id}`}
           className="deleteBorder"
         >
           <span className="article__button">SHOP</span>

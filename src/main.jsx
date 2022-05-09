@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import './main.css';
+import { Context } from './context/context';
 // import App from './pages/checkout';
 import App from './routes/index';
 // import App from '@components/product/ProductContainer';
@@ -9,8 +10,8 @@ import App from './routes/index';
 
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Context>
     <App />
-  </React.StrictMode>,
+  </Context>,
   document.getElementById('root'),
 );

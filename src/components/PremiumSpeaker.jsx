@@ -1,6 +1,6 @@
 import React from 'react';
 
-function PremiumSpeaker() {
+function PremiumSpeaker({ data }) {
   return (
     <article className="premium">
       <div className="circle">
@@ -25,7 +25,7 @@ function PremiumSpeaker() {
           {' '}
           sound.
         </p>
-        <button type="button" className="premium__link">SEE PRODUCT</button>
+        <button type="button" className="premium__link">12</button>
       </section>
     </article>
   );

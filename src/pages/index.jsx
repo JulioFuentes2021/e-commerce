@@ -8,34 +8,32 @@ import PremiumSpeaker from '@components/PremiumSpeaker';
 import Yx1Earphones from '@components/Yx1Earphones';
 import Promotion from '@components/Promotion';
 import Layout from '@components/Layout';
+import Main from '@components/Main';
+
 // import '@styles/index.css';
 
 const index = () => {
   const [products, setProducts] = useState([]);
 
-  useEffect(() => {
-    const test = async () => {
-      const response = await fetch('http://localhost:8000/headphones/');
-      const data = await response.json();
-      console.log(data.products);
-      setProducts(data.products);
-    };
-
-    test();
-  }, []);
+  // useEffect(() => {
+  //   const test = async () => {
+  //     try {
+  //       const response = await fetch('http://localhost:8000/headphones/');
+  //       const data = await response.json();
+  //       setProducts(data.products)
+  //     } catch (error) {
+  //       console.log('Ha surgido un error')
+  //     }
+  //   };
+  //   test();
+  // }, []);
 
   //! I have to decide the best way to use the api for speakers components
   return (
     <Layout className="index">
-      <NewProduct />
+      <NewProduct data={products[0]} />
       <main className="main">
-        <div className="main__content">
-          <GridArticles />
-          <PremiumSpeaker />
-          <Zx7Speaker />
-          <Yx1Earphones />
-          <Promotion />
-        </div>
+        <Main />
       </main>
     </Layout>
   );

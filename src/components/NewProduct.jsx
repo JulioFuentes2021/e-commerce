@@ -1,6 +1,14 @@
-import React from 'react';
+import React, { useEffect, useContext } from 'react';
+import { productContext } from '../context/context';
+import { states } from '../context/getStates';
 
-function NewProduct() {
+function NewProduct({ data }) {
+
+  const products = useContext(productContext);
+  const { mainProducts, setMainProducts } = products
+  useEffect(() => {
+    console.log(mainProducts)
+  }, [])
 
   return (
     <div className="product">
@@ -12,7 +20,7 @@ function NewProduct() {
         />
       </article>
       <article className="product__block">
-        <span className="product__title product--margin">NEW PRODUCT</span>
+        <span className="product__title product--margin">{data?.id}</span>
         <h2 className="product__name product__name--design product--margin">
           XX99 MARK II
           <br />

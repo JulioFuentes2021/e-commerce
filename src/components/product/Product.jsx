@@ -8,10 +8,10 @@ const Product = () => {
 
     useEffect(() => {
         const getProduct = async () => {
-            const response = await fetch(`https://fakestoreapi.com/products/${params.id}`)
+            const response = await fetch(`http://localhost:8000/headphones/${params.id}`)
             const data = await response.json()
             console.log(data)
-            setProduct(data)
+            setProduct(data.products)
         };
 
         getProduct()
