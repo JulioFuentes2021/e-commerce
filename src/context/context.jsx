@@ -13,7 +13,7 @@ const Context = ({ children }) => {
             setMainProducts,
             electronics,
             setElectronics,
-            allProducts, setAllProducts,
+            allProducts,
             setAllProducts
         }}>
             {children}

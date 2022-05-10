@@ -173,6 +173,7 @@
   list-style: none;
   font-size: 1.8rem;
   color: #fff;
+  text-decoration: none;
 }
 .links__item--design {
   font-weight: bold;

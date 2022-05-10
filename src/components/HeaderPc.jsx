@@ -5,17 +5,16 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 function HeaderPc() {
   return (
     <nav className="links links--hiddenPc">
-      <li className="links__item links__item--design">audiophile</li>
+      <Link to="/" className="links__item links__item--design">audiophile</Link>
       <ul className="links__section">
-        <li className="links__item links__item--gap">Electronics</li>
-        <li className="links__item links__item--gap">Jewelery</li>
-        <li className="links__item links__item--gap">Men</li>
-        <li className="links__item links__item--gap">Women</li>
-        <li className="links__item links__item--gap">
-          <Link to="/all-products">
-            Products
-          </Link>
-        </li>
+        <Link to="/electronics" className="links__item links__item--gap">Electronics</Link>
+        <Link to="/jewelery" className="links__item links__item--gap">Jewelery</Link>
+        <Link to="/men" className="links__item links__item--gap">Men</Link>
+        <Link to="/women" className="links__item links__item--gap">Women</Link>
+        <Link className='links__item links__item--gap' to="/all-products">
+          Products
+        </Link>
+
       </ul>
       <ShoppingCartOutlinedIcon className="links__item" />
     </nav>
