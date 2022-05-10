@@ -25,3 +25,9 @@ $color: red
 
 @mixin rounded
     border-radius: $radius
+
+@mixin gridForProducts
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+    gap: 6rem
+    justify-items: center

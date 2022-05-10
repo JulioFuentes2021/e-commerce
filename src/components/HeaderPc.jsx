@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 function HeaderPc() {
@@ -10,6 +11,11 @@ function HeaderPc() {
         <li className="links__item links__item--gap">Jewelery</li>
         <li className="links__item links__item--gap">Men</li>
         <li className="links__item links__item--gap">Women</li>
+        <li className="links__item links__item--gap">
+          <Link to="/all-products">
+            Products
+          </Link>
+        </li>
       </ul>
       <ShoppingCartOutlinedIcon className="links__item" />
     </nav>

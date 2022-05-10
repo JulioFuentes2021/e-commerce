@@ -920,4 +920,13 @@ strong {
   margin: 10rem 0;
 }
 
+.allproducts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 6rem;
+  justify-items: center;
+  padding: 2rem;
+  justify-content: center;
+}
+
 /*# sourceMappingURL=main.css.map */
