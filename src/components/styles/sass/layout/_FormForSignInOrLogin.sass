@@ -1,0 +1,41 @@
+@use '../components/buttons' as button
+@use '../abstracts/variables' as variable
+
+.account
+    display: flex
+    flex-direction: column
+    height: 100vh
+    justify-content: center
+    align-items: center
+
+.accountFormContainer
+    background-color: #fff
+    margin: auto
+    width: variable.$width
+    padding: 2rem
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    &__title
+        font-size: 3rem
+        font-weight: 900
+        margin: 2rem 0
+
+.accountForm
+    width: variable.$width
+
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr))
+    gap: 2rem
+
+    &__send
+        @include button.orangeButton
+        align-self: center
+        margin: 2rem 0
+        // position: absolute
+        // top: 0
+        // left: 0
+        // bottom: 0
+        // right: 0
+        // margin: auto

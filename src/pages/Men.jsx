@@ -1,7 +1,6 @@
 import React, { useEffect, useContext } from 'react';
 import Article from '@components/Articles';
 import { productContext } from '../context/context';
-import Layout from '@components/Layout';
 
 const MenSection = () => {
     const products = useContext(productContext);
@@ -22,13 +21,11 @@ const MenSection = () => {
     }, [])
 
     return (
-        <Layout>
-            <div className="allproducts">
-                {men.map((product) => (
-                    <Article data={product} key={product._id} id={product?.id} />
-                ))}
-            </div>
-        </Layout>
+        <div className="allproducts">
+            {men.map((product) => (
+                <Article data={product} key={product._id} id={product?.id} />
+            ))}
+        </div>
     )
 }
 

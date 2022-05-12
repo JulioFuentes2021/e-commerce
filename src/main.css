@@ -705,6 +705,48 @@ strong {
     opacity: 0;
   }
 }
+.account {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.accountFormContainer {
+  background-color: #fff;
+  margin: auto;
+  width: 90%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.accountFormContainer__title {
+  font-size: 3rem;
+  font-weight: 900;
+  margin: 2rem 0;
+}
+
+.accountForm {
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  gap: 2rem;
+}
+.accountForm__send {
+  width: 10rem;
+  height: 3rem;
+  border: none;
+  outline: none;
+  font-weight: bolder;
+  cursor: pointer;
+  background-color: #f77206;
+  color: #fff;
+  align-self: center;
+  margin: 2rem 0;
+}
+
 .field {
   display: flex;
   flex-direction: column;
