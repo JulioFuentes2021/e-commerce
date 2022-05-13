@@ -22,12 +22,19 @@
         font-weight: 900
         margin: 2rem 0
 
+.accountFormInputs
+    display: flex
+    width: 100%
+    flex-direction: column
+    align-items: center
+
 .accountForm
     width: variable.$width
 
     display: grid
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr))
     gap: 2rem
+    justify-content: center
 
     &__send
         @include button.orangeButton
