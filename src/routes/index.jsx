@@ -10,6 +10,7 @@ import Women from "@pages/Women";
 import ScrollToTop from "../components/ScrollToTop"
 import FormForSignInOrLogin from "@components/FormForSignInOrLogin";
 import Layout from '@components/Layout'
+import SIgnIn from '@pages/SignIn'
 
 const Store = () => {
     return (
@@ -26,6 +27,7 @@ const Store = () => {
                         <Route path="/men" element={<Men />} />
                         <Route path="/women" element={<Women />} />
                         <Route path="/form" element={<FormForSignInOrLogin />} />
+                        <Route path="/login" element={<SIgnIn />} />
                     </Routes>
                 </Layout>
             </ScrollToTop>
