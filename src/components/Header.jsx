@@ -1,24 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import MenuIcon from '@mui/icons-material/Menu';
 import PcHeader from './HeaderPc';
 
 function Header() {
 
+  const [error, setError] = useState(false)
+
   const getProducts = async () => {
     try {
-      await fetch('http://localhost:8000/user/test', {
+      console.log(document.cookie.split('=')[1])
+      const token = document.cookie.split('=')[1];
+      const response = await fetch('http://localhost:8000/user/test', {
         method: 'GET',
         headers: {
-          'authorization': `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqdWxpb0BnbWFpbC5jb20iLCJpYXQiOjE2NTI0ODA0OTV9.aaogGFh2nMkqwcplPfZg_yiSIRk2bsVzZjz2Qb7WZgY`
+          'authorization': `Bearer ${token}`
         }
-      });
-      console.log('Estas autorizado')
+      })
+      const data = await response.json()
+      console.log(data)
+
     } catch (error) {
+      // setError(true)
       console.log(error)
     }
-
   };
+
+  if (error) {
+    return 'Loading'
+  }
 
   return (
     <nav>
