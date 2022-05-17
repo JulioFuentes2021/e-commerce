@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 
 const Product = () => {
     const params = useParams();
+    const navigate = useNavigate();
     const [product, setProduct] = useState();
     const [amount, setAmount] = useState(1);
 
@@ -21,8 +22,10 @@ const Product = () => {
     const getProduct = async () => {
         console.log('Se ejecuto')
         try {
+            const token = document.cookie.split('=')[1]
             const response = await fetch(`http://localhost:8000/user/add`, {
                 headers: {
+                    'authorization': `Bearer ${token}`,
                     'Accept': 'application/json, text/plain, */*',
                     'Content-Type': 'application/json'
                 },
@@ -40,6 +43,7 @@ const Product = () => {
             console.log(data)
         } catch (error) {
             console.log(error)
+            navigate('/login')
         }
     }
 
