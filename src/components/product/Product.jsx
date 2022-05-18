@@ -5,6 +5,7 @@ import { useParams, useNavigate } from "react-router-dom";
 const Product = () => {
     const params = useParams();
     const navigate = useNavigate();
+    const [loading, setLoading] = useState(false);
     const [product, setProduct] = useState();
     const [amount, setAmount] = useState(1);
 
@@ -21,6 +22,7 @@ const Product = () => {
 
     const getProduct = async () => {
         console.log('Se ejecuto')
+        setLoading(true)
         try {
             const token = document.cookie.split('=')[1]
             const response = await fetch(`http://localhost:8000/user/add`, {
@@ -41,12 +43,13 @@ const Product = () => {
             })
             const data = await response.json()
             console.log(data)
+            setLoading(false)
         } catch (error) {
             console.log(error)
             navigate('/login')
+            setLoading(false)
         }
     }
-
 
     return (
         <div className="view">
@@ -64,7 +67,7 @@ const Product = () => {
                         <span className="productsAmount__value">{amount}</span>
                         <button onClick={() => setAmount(amount + 1)} className="productsAmount__operation">+</button>
                     </div>
-                    <button onClick={getProduct} className="cart__button">ADD TO CART</button>
+                    <button onClick={getProduct} className="cart__button">{!loading ? 'ADD TO CART' : 'Loading'}</button>
                 </div>
             </div>
         </div>

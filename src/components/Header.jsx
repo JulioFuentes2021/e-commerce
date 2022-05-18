@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import MenuIcon from '@mui/icons-material/Menu';
 import PcHeader from './HeaderPc';
@@ -35,7 +36,7 @@ function Header() {
       <PcHeader />
       <ul className="links links--hiddenMobile">
         <MenuIcon className="links__item" />
-        <li className="links__item links__item--design">audiophile</li>
+        <Link to="/" className="links__item links__item--design">audiophile</Link>
         <ShoppingCartOutlinedIcon onClick={getProducts} className="links__item links__item--extraSize" />
       </ul>
     </nav>
