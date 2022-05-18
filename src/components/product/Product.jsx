@@ -51,6 +51,8 @@ const Product = () => {
         }
     }
 
+    const price = new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'USD' }).format(product?.price);
+
     return (
         <div className="view">
             <div className="viewImage">
@@ -60,7 +62,7 @@ const Product = () => {
                 <span className="viewDescription__tag">NEW PRODUCT</span>
                 <span className="viewDescription__name">{product?.name}</span>
                 <p className="viewDescription__info">{product?.description}</p>
-                <span className="viewDescription__price">{product?.price}</span>
+                <span className="viewDescription__price">{price}</span>
                 <div className="cart">
                     <div className="productsAmount">
                         <button disabled={amount === 1 ? true : false} onClick={() => setAmount(amount - 1)} className="productsAmount__operation">-</button>
