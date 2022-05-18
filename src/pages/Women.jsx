@@ -1,28 +1,16 @@
 import React, { useEffect, useContext } from 'react';
 import Article from '@components/Articles';
 import { productContext } from '../context/context';
+import useFetchData from '../customHooks/useFetchData';
 
 const WomenSection = () => {
     const products = useContext(productContext);
     const { women, setWomen } = products;
-
-    useEffect(() => {
-        const getAllProducts = async () => {
-            if (!women.length) {
-                const response = await fetch("http://localhost:8000/headphones/category/women's clothing");
-                const data = await response.json();
-                setWomen(data.products);
-                console.log('Pidio')
-            }
-        }
-
-        getAllProducts();
-
-    }, [])
+    const [state] = useFetchData("http://localhost:8000/headphones/category/women's clothing", women, setWomen);
 
     return (
         <div className="allproducts">
-            {women.map((product) => (
+            {state.map((product) => (
                 <Article data={product} key={product._id} id={product?.id} />
             ))}
         </div>

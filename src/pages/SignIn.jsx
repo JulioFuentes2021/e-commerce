@@ -1,10 +1,12 @@
-import React, { useRef } from 'react'
-import Field from '../components/checkout/checkoutForm/FormInputAndLabel'
+import React, { useRef, useState } from 'react';
+import { useNavigate } from "react-router-dom";
+import Field from '../components/checkout/checkoutForm/FormInputAndLabel';
 
 const FormForSignInOrLogin = () => {
 
-    const email = useRef()
-    const password = useRef()
+    const email = useRef();
+    const password = useRef();
+    let navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -14,7 +16,7 @@ const FormForSignInOrLogin = () => {
             password: password.current.value
         }
         try {
-            await fetch(url, {
+            const req = await fetch(url, {
                 headers: {
                     'Accept': 'application/json, text/plain, */*',
                     'Content-Type': 'application/json'
@@ -23,7 +25,8 @@ const FormForSignInOrLogin = () => {
                 credentials: 'include',
                 body: JSON.stringify(data)
             })
-                .then((data) => console.log(data))
+            const res = await req.json()
+            navigate(-1)
         } catch (error) {
             console.log('Ha surgido un error', error)
         }
