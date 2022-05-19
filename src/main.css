@@ -705,6 +705,12 @@ strong {
     opacity: 0;
   }
 }
+.error {
+  color: #e90404;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
 .account {
   display: flex;
   flex-direction: column;
@@ -721,6 +727,7 @@ strong {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
 }
 .accountFormContainer__title {
   font-size: 3rem;
@@ -731,8 +738,17 @@ strong {
 .accountFormInputs {
   display: flex;
   width: 100%;
+  gap: 2rem;
   flex-direction: column;
   align-items: center;
+}
+.accountFormInputs__register {
+  font-size: 1.5rem;
+  text-align: center;
+}
+.accountFormInputs__register--color {
+  text-decoration: underline;
+  color: #f78e06;
 }
 
 .accountForm {

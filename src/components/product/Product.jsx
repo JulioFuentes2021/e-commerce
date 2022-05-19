@@ -25,6 +25,8 @@ const Product = () => {
         setLoading(true)
         try {
             const token = document.cookie.split('=')[1]
+            // const gmail = await jwt.verify(token, 'julio')
+            // console.log(gmail)
             const response = await fetch(`http://localhost:8000/user/add`, {
                 headers: {
                     'authorization': `Bearer ${token}`,
@@ -33,7 +35,6 @@ const Product = () => {
                 },
                 method: 'POST',
                 body: JSON.stringify({
-                    gmail: 'cart@gmail.com',
                     name: product.name,
                     image: product.image,
                     amount: amount,

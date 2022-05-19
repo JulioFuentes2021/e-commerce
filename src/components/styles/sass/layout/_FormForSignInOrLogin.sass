@@ -1,6 +1,11 @@
 @use '../components/buttons' as button
 @use '../abstracts/variables' as variable
 
+.error
+    color: #e90404
+    font-size: 1.5rem
+    text-align: center
+
 .account
     display: flex
     flex-direction: column
@@ -16,6 +21,7 @@
     display: flex
     flex-direction: column
     align-items: center
+    justify-content: space-between
 
     &__title
         font-size: 3rem
@@ -25,8 +31,17 @@
 .accountFormInputs
     display: flex
     width: 100%
+    gap: 2rem
     flex-direction: column
     align-items: center
+
+    &__register
+        font-size: 1.5rem
+        text-align: center
+
+        &--color
+            text-decoration: underline
+            color: variable.$secondary-color
 
 .accountForm
     width: variable.$width
