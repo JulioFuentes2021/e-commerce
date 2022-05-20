@@ -1,0 +1,32 @@
+.layout
+    width: 100%
+    overflow: hidden
+
+.modal
+    color: green
+    width: 100%
+    position: fixed
+    z-index: 20
+    top: 0
+    height: 100vh
+    background-color: rgba(0, 0, 0, 0.4)
+    display: flex
+    justify-content: flex-end
+    padding: 1rem
+    overflow: hidden
+
+    &__item
+        width: 80%
+        margin: 8rem 0
+        display: flex
+        flex-direction: column
+        align-items: end
+
+    &__close
+        margin: 1rem 0
+        color: red
+        cursor: pointer
+
+@media screen and (min-width: 768px)
+    .modal__item
+        width: 40%

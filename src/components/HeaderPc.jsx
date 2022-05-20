@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
-function HeaderPc() {
+function HeaderPc({ state }) {
   return (
     <nav className="links links--hiddenPc">
       <Link to="/" className="links__item links__item--design">audiophile</Link>
@@ -16,7 +16,7 @@ function HeaderPc() {
         </Link>
 
       </ul>
-      <ShoppingCartOutlinedIcon className="links__item" />
+      <ShoppingCartOutlinedIcon onClick={() => state.setCart(!state.cart)} className="links__item" />
     </nav>
   );
 }

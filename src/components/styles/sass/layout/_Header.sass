@@ -16,10 +16,13 @@
         font-weight: bold
 
     &__section
+        height: 100%
         display: flex
+        justify-content: center
+        align-items: center
 
-    &__item--gap
-        margin: 0 1rem
+    // &__item--gap
+    //     margin: 0 1rem
 
     &--hiddenPc
         display: none
@@ -28,9 +31,10 @@
     .links__item--extraSize
         margin-left: 60%
 
-@media screen and (min-width:768px)
+@media screen and (min-width:900px)
     .links--hiddenMobile
         display: none
 
     .links--hiddenPc
         display: flex
+        justify-content: space-between

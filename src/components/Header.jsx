@@ -3,10 +3,12 @@ import { Link } from 'react-router-dom';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import MenuIcon from '@mui/icons-material/Menu';
 import PcHeader from './HeaderPc';
+import Modal from '@components/modal/modal'
 
 function Header() {
 
   const [error, setError] = useState(false)
+  const [cart, setCart] = useState(false)
 
   const getProducts = async () => {
     try {
@@ -33,11 +35,12 @@ function Header() {
 
   return (
     <nav>
-      <PcHeader />
+      {cart && <Modal state={{ cart, setCart }} />}
+      <PcHeader state={{ cart, setCart }} />
       <ul className="links links--hiddenMobile">
         <MenuIcon className="links__item" />
         <Link to="/" className="links__item links__item--design">audiophile</Link>
-        <ShoppingCartOutlinedIcon onClick={getProducts} className="links__item links__item--extraSize" />
+        <ShoppingCartOutlinedIcon onClick={() => setCart(!cart)} className="links__item links__item--extraSize" />
       </ul>
     </nav>
   );
