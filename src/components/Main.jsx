@@ -7,12 +7,12 @@ import Yx1Earphones from '@components/Yx1Earphones';
 import Promotion from '@components/Promotion';
 
 const Main = () => {
-    const products = useContext(productContext);
-    const { mainProducts } = products;
-    console.log(mainProducts)
+    // const products = useContext(productContext);
+    // const { mainProducts } = products;
+    // console.log(mainProducts)
     return (
         <div className="main__content">
-            <GridArticles data={[mainProducts]} />
+            <GridArticles />
             <PremiumSpeaker data={12} />
             <Zx7Speaker />
             <Yx1Earphones />

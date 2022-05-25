@@ -5,7 +5,7 @@ import Article from './Articles';
 import Loading from './loader/loader';
 import useFetchData from '../customHooks/useFetchData';
 
-function GridArticles({ data }) {
+function GridArticles() {
   const products = useContext(productContext);
   const { mainProducts, setMainProducts } = products
   const [state] = useFetchData('http://localhost:8000/headphones/category/electronics?limit=3', mainProducts, setMainProducts);

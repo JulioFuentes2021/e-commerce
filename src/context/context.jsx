@@ -9,6 +9,7 @@ const Context = ({ children }) => {
     const [jewelery, setJewelery] = useState([])
     const [women, setWomen] = useState([])
     const [men, setMen] = useState([])
+    const [shoppingCart, setShoppingCart] = useState([])
 
     return (
         <productContext.Provider value={{
@@ -23,7 +24,9 @@ const Context = ({ children }) => {
             women,
             setWomen,
             men,
-            setMen
+            setMen,
+            shoppingCart,
+            setShoppingCart,
         }}>
             {children}
         </productContext.Provider>

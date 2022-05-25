@@ -54,25 +54,13 @@
 
 .productsAmount
     display: flex
-
-.productsAmount__operation
-    background-color: #ddd
-    width: 4rem
-    height: 3rem
-    border: none
-    cursor: pointer
-    font-size: 2rem
-
-.productsAmount__value
-    border-left: 1px solid #aaa
-    border-right: 1px solid #aaa
-    background-color: #ddd
-    width: 4rem
-    height: 3rem
-    display: flex
-    justify-content: center
     align-items: center
-    font-size: 1.5rem
+
+    &__operation
+        @include mixin.AddOrRemoveButtons($width:2rem, $height:2rem)
+
+    &__value
+        @include mixin.ValueButtons($width:2rem, $height:2rem)
 
 //Container 
 .singleProductContainer

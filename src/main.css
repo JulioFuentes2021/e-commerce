@@ -625,23 +625,22 @@ strong {
 
 .productsAmount {
   display: flex;
+  align-items: center;
 }
-
 .productsAmount__operation {
   background-color: #ddd;
-  width: 4rem;
-  height: 3rem;
+  width: 2rem;
+  height: 2rem;
   border: none;
   cursor: pointer;
   font-size: 2rem;
 }
-
 .productsAmount__value {
   border-left: 1px solid #aaa;
   border-right: 1px solid #aaa;
   background-color: #ddd;
-  width: 4rem;
-  height: 3rem;
+  width: 2rem;
+  height: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -773,41 +772,105 @@ strong {
 }
 
 .layout {
-  width: 100%;
   overflow: hidden;
 }
 
 .modal {
-  color: green;
   width: 100%;
+  height: 100%;
   position: fixed;
   z-index: 20;
   top: 0;
-  height: 100vh;
   background-color: rgba(0, 0, 0, 0.4);
   display: flex;
   justify-content: flex-end;
-  padding: 1rem;
-  overflow: hidden;
-}
-.modal__item {
-  width: 80%;
-  margin: 8rem 0;
-  display: flex;
-  flex-direction: column;
-  align-items: end;
+  transform: translateX(100%);
+  transition: transform 500ms ease;
 }
 .modal__close {
-  margin: 1rem 0;
-  color: red;
+  background-color: #e90404;
+  border-radius: 0.4rem;
   cursor: pointer;
+  position: absolute;
 }
 
-@media screen and (min-width: 768px) {
-  .modal__item {
-    width: 40%;
-  }
+.show {
+  transform: translateX(0);
 }
+
+.shoppingCart {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 2rem;
+  background-color: #fff;
+  padding: 2rem;
+  height: auto;
+}
+.shoppingCart__products {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.shoppingCart__header {
+  font-weight: 900;
+  display: flex;
+  justify-content: space-between;
+}
+
+.imageCart {
+  display: flex;
+}
+.imageCart__item {
+  width: 3rem;
+  height: 3rem;
+  object-fit: cover;
+}
+
+.cartDescription__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.cartDescription__name {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.cartDescription__price {
+  font-size: 1.1rem;
+  color: #999;
+  font-weight: bold;
+}
+
+.cartTotal {
+  display: flex;
+  justify-content: space-between;
+}
+.cartTotal__amount {
+  font-weight: 900;
+}
+.cartTotal__title {
+  font-size: 1.2rem;
+  color: #999;
+  font-weight: bold;
+}
+
+.cartLink {
+  display: flex;
+  justify-content: center;
+}
+.cartLink__button {
+  width: 100%;
+  height: 3rem;
+  border: none;
+  outline: none;
+  font-weight: bolder;
+  cursor: pointer;
+  background-color: #f77206;
+  color: #fff;
+}
+
 .field {
   display: flex;
   flex-direction: column;
@@ -917,6 +980,7 @@ strong {
   display: flex;
   width: 100%;
   justify-content: space-between;
+  align-items: center;
 }
 .item__moneyBox {
   margin: 0 0.5rem;

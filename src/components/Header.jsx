@@ -4,11 +4,13 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import MenuIcon from '@mui/icons-material/Menu';
 import PcHeader from './HeaderPc';
 import Modal from '@components/modal/modal'
+import useGetShoppingCart from '../customHooks/useGetShoppingCart';
 
 function Header() {
 
   const [error, setError] = useState(false)
   const [cart, setCart] = useState(false)
+  // const [shoppingCart] = useGetShoppingCart();
 
   const getProducts = async () => {
     try {
@@ -35,7 +37,7 @@ function Header() {
 
   return (
     <nav>
-      {cart && <Modal state={{ cart, setCart }} />}
+      <Modal cart={cart} setCart={setCart} />
       <PcHeader state={{ cart, setCart }} />
       <ul className="links links--hiddenMobile">
         <MenuIcon className="links__item" />
