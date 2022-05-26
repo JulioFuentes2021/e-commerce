@@ -1,29 +1,28 @@
 import React, { useState, useEffect } from 'react';
 
-function Total({ data }) {
-  let [total, setTotal] = useState(0);
-  let [shipping, setShipping] = useState(0);
-  let [vat, setVat] = useState(0);
+function Total({ total, vat, shipping, grandTotal }) {
+  // let [total, setTotal] = useState(0);
+  // let [shipping, setShipping] = useState(0);
+  // let [vat, setVat] = useState(0);
 
-  useEffect(() => {
-    // setTotal(shoppingCart)
+  // useEffect(() => {
+  //   // setTotal(shoppingCart)
 
-    const getTotal = async () => {
-      console.log(data)
+  //   const getTotal = async () => {
+  //     // console.log(data)
 
-      await data.forEach(p => {
-        setTotal(total += p.price * p.amount)
-      })
+  //     data.forEach(p => {
+  //       setTotal(total += p.price * p.amount)
+  //     })
 
-      setShipping(total * 0.05)
-      setVat(total * 0.05)
-    }
+  //     setShipping(total * 0.05)
+  //     setVat(total * 0.05)
+  //   }
 
-    getTotal();
-    console.log(data)
+  //   getTotal();
+  //   // console.log(data)
 
-  }, [])
-
+  // }, [])
 
   return (
     <div className="total">
@@ -43,7 +42,7 @@ function Total({ data }) {
       </div>
       <div className="total__box total__box--margin">
         <span className="total__title">GRAND TOTAL</span>
-        <span className="total__money total__money--color">{total + shipping + vat}</span>
+        <span className="total__money total__money--color">{grandTotal}</span>
       </div>
     </div>
   );

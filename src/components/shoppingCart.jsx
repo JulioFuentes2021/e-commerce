@@ -12,30 +12,32 @@ const shoppingCart = ({ cart }) => {
     const [updateCart, setUpdateCart] = useState(false);
 
     useEffect(() => {
-        const getShoppingCart = async () => {
-            setLoading(true)
-            try {
-                const token = document.cookie.split('=')[1];
-                const response = await fetch('http://localhost:8000/headphones/shopping', {
-                    headers: {
-                        'authorization': `Bearer ${token}`
+        if (cart) {
+            const getShoppingCart = async () => {
+                setLoading(true)
+                try {
+                    const token = document.cookie.split('=')[1];
+                    const response = await fetch('http://localhost:8000/headphones/shopping', {
+                        headers: {
+                            'authorization': `Bearer ${token}`
+                        }
+                    });
+                    const data = await response.json();
+                    if (data.response.length > 3) {
+                        setShoppingCart([data.response.shoppingCart[0], data.response.shoppingCart[1], data.response.shoppingCart[2],])
+                    } else {
+                        setShoppingCart(data.response.shoppingCart)
                     }
-                });
-                const data = await response.json();
-                if (data.response.length > 3) {
-                    setShoppingCart([data.response[0], data.response[1], data.response[2],])
-                } else {
-                    setShoppingCart(data.response)
+                } catch (error) {
+                    setError(true)
+                    console.log('Error paa', error)
                 }
-            } catch (error) {
-                setError(true)
-                console.log('Error paa', error)
+                setLoading(false)
             }
-            setLoading(false)
+            console.log('cart')
+            getShoppingCart()
         }
-        console.log('cart')
-        getShoppingCart()
-    }, [])
+    }, [cart])
 
     return (
         <div className="shoppingCart">
