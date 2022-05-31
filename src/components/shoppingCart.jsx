@@ -3,7 +3,7 @@ import AddOrRemove from '@components/AddOrRemove'
 import { Link } from 'react-router-dom'
 import useGetShoppingCart from '../customHooks/useGetShoppingCart'
 
-const shoppingCart = ({ cart }) => {
+const shoppingCart = ({ cart, setCart }) => {
 
     // const [shoppingCart, loading, error] = useGetShoppingCart();
     const [shoppingCart, setShoppingCart] = useState([])
@@ -74,7 +74,7 @@ const shoppingCart = ({ cart }) => {
                     </span>
                 </section> */}
                 <span>You can see all the details and products <br /> pressing the checkout button.</span>
-                <Link to="checkout" className="cartLink">
+                <Link to="checkout" className="cartLink" onClick={() => setCart(!cart)}>
                     <button className="cartLink__button">Checkout</button>
                 </Link>
 

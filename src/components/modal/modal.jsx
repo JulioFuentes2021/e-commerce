@@ -8,7 +8,7 @@ const modal = ({ cart, setCart }) => {
 
     return ReactDOM.createPortal(<div className={`modal ${cart && 'show'}`}>
         <CloseIcon onClick={() => setCart(!cart)} className="modal__close" style={{ fontSize: '2rem', margin: '1rem' }} />
-        <ShoppingCart cart={cart} />
+        <ShoppingCart cart={cart} setCart={setCart} />
     </div>, modal)
 }
 
