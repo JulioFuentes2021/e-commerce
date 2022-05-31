@@ -8,7 +8,7 @@ function SummaryItems({ image, name, amount, price }) {
       </div>
       <div className="item__totalBox">
         <div className="item__moneyBox">
-          <span className="item__name">{name}</span>
+          {/* <span className="item__name">{name}</span> */}
           <span className="item__price">{price}</span>
         </div>
         <div className="item__amount">

@@ -24,7 +24,11 @@ const Product = () => {
         console.log('Se ejecuto')
         setLoading(true)
         try {
-            const token = document.cookie.split('=')[1]
+            const resToken = await fetch('http://localhost:8000/user/refresh', {
+                credentials: "include"
+            })
+            const { token } = await resToken.json()
+            console.log(token)
             // const gmail = await jwt.verify(token, 'julio')
             // console.log(gmail)
             const response = await fetch(`http://localhost:8000/user/add`, {
@@ -33,6 +37,7 @@ const Product = () => {
                     'Accept': 'application/json, text/plain, */*',
                     'Content-Type': 'application/json'
                 },
+                credentials: "include",
                 method: 'POST',
                 body: JSON.stringify({
                     name: product.name,

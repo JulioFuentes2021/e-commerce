@@ -13,7 +13,10 @@ const useGetShoppingCart = () => {
         const getShoppingCart = async () => {
             console.log('UseShopping')
             try {
-                const token = document.cookie.split('=')[1];
+                const resToken = await fetch('http://localhost:8000/user/refresh', {
+                    credentials: "include"
+                })
+                const { token } = await resToken.json()
                 const response = await fetch('http://localhost:8000/headphones/shopping', {
                     headers: {
                         'authorization': `Bearer ${token}`

@@ -16,14 +16,19 @@ const shoppingCart = ({ cart }) => {
             const getShoppingCart = async () => {
                 setLoading(true)
                 try {
-                    const token = document.cookie.split('=')[1];
+                    const resToken = await fetch('http://localhost:8000/user/refresh', {
+                        credentials: "include"
+                    })
+                    const { token } = await resToken.json()
+
                     const response = await fetch('http://localhost:8000/headphones/shopping', {
                         headers: {
                             'authorization': `Bearer ${token}`
                         }
                     });
                     const data = await response.json();
-                    if (data.response.length > 3) {
+                    console.log(data.cartLength)
+                    if (data.cartLength > 3) {
                         setShoppingCart([data.response.shoppingCart[0], data.response.shoppingCart[1], data.response.shoppingCart[2],])
                     } else {
                         setShoppingCart(data.response.shoppingCart)
